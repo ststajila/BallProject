@@ -56,4 +56,21 @@ public class Ball extends JPanel{
 
     }
 
+    public int getX(){
+        return x;
+    }
+
+    public int getY(){
+        return y;
+    }
+
+    public int getBallSize(){
+        return size;
+    }
+
+    public void changeSpeed(){
+        xSpeed *= -1;
+        ySpeed *= -1;
+    }
+
 }
