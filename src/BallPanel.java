@@ -27,29 +27,31 @@ public class BallPanel extends JPanel{
         }
 
         // New Code
-        /*int x;
-        int y;
-        int x1;
-        int y1;
+        int x, y, xs, ys, x1, y1, x1s, y1s;
         int count = 0;
         do{
             int i = 0;
                 x = balls[i].getX();
                 y = balls[i].getY();
+                xs = balls[i].getX() + balls[i].getBallSize();
+                ys = balls[i].getY() + balls[i].getBallSize();
 
             for (int a = 1; a < 20; a++){
                 x1 = balls[a].getX();
                 y1 = balls[a].getY();
-                if ( x1 == x + balls[i].getBallSize() && y1 <= y && y <= y1 + balls[a].getBallSize()
+                x1s = balls[a].getX() + balls[a].getBallSize();
+                y1s = balls[a].getY() + balls[a].getBallSize();
+
+                if ( x1 == xs && y1 <= y && y <= y1s
                 ) {
                     balls[a].changeSpeed();
                     balls[i].changeSpeed();
-                }
+                };
             };
 
             i++;
             count++;
-        } while(count == 20);*/
+        } while(count == 20);
 
 
         repaint();
