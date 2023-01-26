@@ -11,9 +11,9 @@ public class Ball extends JPanel{
     public Ball(){
         x = (int)(Math.random()*200);
         y = (int)(Math.random()* 200);
-        size = (int)(Math.random()*100);
-        xSpeed = (int)(Math.random()*30);
-        ySpeed = (int)(Math.random()*30);
+        size = (int)(Math.random()*100)+5;
+        xSpeed = (int)(Math.random()*13)+1;
+        ySpeed = (int)(Math.random()*13)+1;
 
         int r = (int)(Math.random() * 256);
         int g = (int)(Math.random() * 256);
@@ -45,13 +45,6 @@ public class Ball extends JPanel{
 
         if (y >= panel.getHeight() - size || y <= 0){
             ySpeed *= -1;
-        }
-
-        try{
-            Thread.sleep(10);
-        }
-        catch(Exception e){
-            System.out.println(e.toString());
         }
 
     }

@@ -51,7 +51,12 @@ public class BallPanel extends JPanel{
 //            i++;
 //            count++;
 //        } while(count == 20);
-
+        try{
+            Thread.sleep(10);
+        }
+        catch(Exception e){
+            System.out.println(e.toString());
+        }
 
         repaint();
 
