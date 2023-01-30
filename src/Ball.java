@@ -1,6 +1,6 @@
 import java.awt.*;
 import javax.swing.*;
-public class Ball extends JPanel{
+public class Ball {
     private int x;
     private int y;
     private int size;
@@ -40,11 +40,11 @@ public class Ball extends JPanel{
         y += ySpeed;
 
         if (x >= panel.getWidth() - size || x <= 0){
-            xSpeed *= -1;
+            xSpeed *= (-1 *((int)(Math.random())+1));
         }
 
         if (y >= panel.getHeight() - size || y <= 0){
-            ySpeed *= -1;
+            ySpeed *= (-1 *((int)(Math.random())+1)) ;
         }
 
     }
@@ -65,5 +65,7 @@ public class Ball extends JPanel{
         xSpeed *= -1;
         ySpeed *= -1;
     }
+
+
 
 }
